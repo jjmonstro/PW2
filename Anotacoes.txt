@@ -1,0 +1,10 @@
+para rodar o porjeto
+
+npm install
+ng serve
+não aceita autocompletion
+
+para criar um componente
+ng generate component nomeDoArquivo
+ou
+ng g c nomeDoArquivo
