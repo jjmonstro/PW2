@@ -1,7 +1,8 @@
+ng new NomeDoProjeto <-- cria o projeto
 para rodar o porjeto
 
 npm install
-ng serve
+ng serve <-- cria o projeto
 não aceita autocompletion
 
 para criar um componente
