@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 para criar um projeto
 ng new
 
+=======
+ng new NomeDoProjeto <-- cria o projeto
+>>>>>>> 7d110352de087428a1c5c8f4abb2d827501e99f9
 para rodar o porjeto
 
 npm install
-ng serve
+ng serve <-- cria o projeto
 não aceita autocompletion
 
 para criar um componente
