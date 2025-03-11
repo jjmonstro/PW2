@@ -1,3 +1,6 @@
+para criar um projeto
+ng new
+
 para rodar o porjeto
 
 npm install
