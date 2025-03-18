@@ -9,5 +9,5 @@ import { TextOverflowComponent } from "./text-overflow/text-overflow.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'pw3-input-output';
+  
 }
