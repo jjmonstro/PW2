@@ -53,7 +53,7 @@ export class AleatorioComponent {
     var valor = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
 
     this.result.emit(valor);
-    
+
     console.log(valor);
   }
 

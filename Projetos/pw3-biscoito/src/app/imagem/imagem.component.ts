@@ -8,14 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ImagemComponent {
 
-  foto="biscoito.png"
+  @Input() foto!: string;
 
-  biscoito(){
-    if (this.foto=="biscoito.png"){
-      this.foto="biscoito-aberto.png"
-    } else{
-      this.foto="biscoito.png"
-    }
-  }
 
 }
