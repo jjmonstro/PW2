@@ -18,7 +18,7 @@ export class TarefasComponent {
   mostrarTarefas: boolean = false
   botao: boolean = true
   mostrarTarefasConcluidas: boolean = false
-  
+
   mostrar(){
     this.mostrarTarefas = true;
     this.mostrarTarefasConcluidas = false;

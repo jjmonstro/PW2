@@ -9,6 +9,11 @@ import {ChangeDetectionStrategy, computed, signal} from '@angular/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {inject} from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 export interface Task {
   name: string;
@@ -18,11 +23,17 @@ export interface Task {
 
 @Component({
   selector: 'app-texte-bootstrap',
-  imports: [MatSlideToggleModule, MatProgressBarModule, MatCardModule, MatRadioModule, FormsModule, MatSliderModule, MatProgressSpinnerModule,MatTabsModule, MatCheckboxModule, FormsModule],
+  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, MatSlideToggleModule, MatProgressBarModule, MatCardModule, MatRadioModule, FormsModule, MatSliderModule, MatProgressSpinnerModule,MatTabsModule, MatCheckboxModule, FormsModule],
   templateUrl: './texte-bootstrap.component.html',
   styleUrl: './texte-bootstrap.component.css'
 })
 export class TexteBootstrapComponent {
+
+  private _snackBar = inject(MatSnackBar);
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
+  }
   mode: ProgressSpinnerMode = 'determinate';
   value = 50;
 

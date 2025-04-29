@@ -15,8 +15,20 @@ export class ForComponent {
   }
   nomeNovo:any
   adicionar(){
-    this.nomeNovo = document.getElementById("NomeInput")?.ariaValueNow
+    const inputElement = document.getElementById("NomeInput") as HTMLInputElement;
+    this.nomeNovo = inputElement?.value;
     console.log(this.nomeNovo)
+    if (this.nomeNovo == '') {
+      this.nomeNovo = ''
+      alert('Campo vazio!');
+      return;
+    }
     this.professores.push(this.nomeNovo)
+    inputElement.value = '';
+  }
+
+  som() {
+    const audioElement = document.getElementById('myAudio') as HTMLAudioElement;
+    audioElement.play();
   }
 }

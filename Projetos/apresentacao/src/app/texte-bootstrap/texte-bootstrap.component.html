@@ -76,6 +76,20 @@
   <mat-tab label="Fourth"> <p><mat-slide-toggle>Slide me!</mat-slide-toggle></p>
     <p><mat-slide-toggle labelPosition="before">...and slide me too!</mat-slide-toggle></p>
      </mat-tab>
+     <mat-tab label="Fifth">
+      <mat-form-field>
+        <mat-label>Message</mat-label>
+        <input matInput value="Disco party!" #message>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Action</mat-label>
+        <input matInput value="Dance" #action>
+      </mat-form-field>
+
+      <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+
+     </mat-tab>
 </mat-tab-group>
 
 

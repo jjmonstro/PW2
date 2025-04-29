@@ -9,6 +9,7 @@
 <br>
 
 @for(item of tarefas; track $index){
+
   @if(mostrarTarefasConcluidas){
     @if(item.concluido==true){
       <li [hidden]="!mostrarTarefas">
@@ -17,7 +18,7 @@
     }
   }@else{
     <li [hidden]="!mostrarTarefas">
-      {{item.id}} - {{item.nome}} - @if(item.concluido){concluído}@else{não concluído}
+      {{item.id}} - {{item.nome}} {{item.concluido ? ' - concluído' : ''}}
     </li>
   }
 
