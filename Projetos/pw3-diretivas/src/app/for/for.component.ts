@@ -28,7 +28,12 @@ export class ForComponent {
   }
 
   som() {
-    const audioElement = document.getElementById('myAudio') as HTMLAudioElement;
-    audioElement.play();
+    // const audioElement = document.getElementById('myAudio') as HTMLAudioElement;
+    // audioElement.play();
+    let audio = new Audio();
+    audio.src = "../assets/fart.mp3";
+    audio.load();
+    audio.play();
+    console.log("executou som")
   }
 }
