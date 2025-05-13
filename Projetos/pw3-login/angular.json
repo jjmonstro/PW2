@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pw3-forms": {
+    "pw3-login": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/pw3-forms",
+            "outputPath": "dist/pw3-login",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -21,8 +21,10 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -57,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pw3-forms:build:production"
+              "buildTarget": "pw3-login:build:production"
             },
             "development": {
-              "buildTarget": "pw3-forms:build:development"
+              "buildTarget": "pw3-login:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,8 +79,10 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
