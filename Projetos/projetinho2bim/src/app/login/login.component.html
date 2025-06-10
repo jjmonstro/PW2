@@ -1,0 +1,37 @@
+<form [formGroup]="formularioLogin">
+  <div>
+    <label>Username:</label>
+    <input formControlName="user" />
+
+    @if(formularioLogin.get('user')?.touched && formularioLogin.get('user')?.invalid)
+    {
+      <div>
+        @if (formularioLogin.get('user')?.errors?.['required'])
+        {
+          <small>Nome é obrigatório</small>
+        }
+
+        @if (formularioLogin.get('user')?.errors?.['minlength'])
+        {
+          <small>No mínimo 3 letras</small>
+        }
+      </div>
+    }
+  </div>
+
+  <div>
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+
+     @if(formularioLogin.get('password')?.touched && formularioLogin.get('password')?.invalid) {
+      <div>
+        @if (formularioLogin.get('password')?.errors?.['required']) {
+          <small>Senha é obrigatória</small>
+        }
+
+      </div>
+    }
+  </div>
+</form>
+
+<button type="submit" (click)="onSubmit()" [disabled]="formularioLogin.invalid" >Enviar</button>
