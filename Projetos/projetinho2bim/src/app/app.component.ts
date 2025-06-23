@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from "./login/login.component";
 import { FuncionalidadeComponent } from "./funcionalidade/funcionalidade.component";
 
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, LoginComponent, FuncionalidadeComponent],
@@ -11,4 +12,5 @@ import { FuncionalidadeComponent } from "./funcionalidade/funcionalidade.compone
 })
 export class AppComponent {
   title = 'projetinho2bim';
+   
 }

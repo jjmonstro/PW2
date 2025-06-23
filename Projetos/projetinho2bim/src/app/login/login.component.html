@@ -3,40 +3,16 @@
     <label>Username:</label>
     <input formControlName="user" />
 
-    <!-- @if(formularioLogin.get('user')?.touched && formularioLogin.get('user')?.invalid)
-    {
-      <div>
-        @if (formularioLogin.get('user')?.errors?.['required'])
-        {
-          <small>Nome é obrigatório</small>
-        }
-
-        @if (formularioLogin.get('user')?.errors?.['pattern'])
-        {
-          <small>Usuario nao encontrado</small>
-        }
-      </div>
-    } -->
+  
   </div>
 
   <div>
     <label>Password:</label>
     <input type="password" formControlName="password" />
 
-     <!-- @if(formularioLogin.get('password')?.touched && formularioLogin.get('password')?.invalid) {
-      <div>
-        @if (formularioLogin.get('password')?.errors?.['required']) {
-          <small>Senha é obrigatória</small>
-        }
-
-        @if (formularioLogin.get('password')?.errors?.['pattern'])
-        {
-          <small>senha incorreta</small>
-        }
-
-      </div>
-    } -->
+    
   </div>
+  <p>Boleg, 123456</p>
 </form>
 
 <button type="submit" (click)="onSubmit()">Enviar</button>
