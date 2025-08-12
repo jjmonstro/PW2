@@ -1,25 +1,22 @@
-package br.com.etechas.tarefas.scheduled;
+package br.com.etechas.tarefas.schedule;
 
-import br.com.etechas.tarefas.enums.StatusEnum;
 import br.com.etechas.tarefas.entity.Tarefa;
+import br.com.etechas.tarefas.enums.StatusEnum;
 import br.com.etechas.tarefas.repository.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import br.com.etechas.tarefas.repository.TarefaRepository;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
-@EnableScheduling
 @Service
 public class ScheduledTask {
 
     @Autowired
-    private TarefaRepository taskRepository;
+    private TarefaRepository tarefaRepository;
 
     private static final String[] TASK_TITLES = {
         "Revisar código",
@@ -74,7 +71,7 @@ public class ScheduledTask {
         task.setResponsavel(RESPONSIBLES[random.nextInt(RESPONSIBLES.length)]);
         
         // Salva a tarefa no banco
-        taskRepository.save(task);
+        tarefaRepository.save(task);
         
         System.out.println("Tarefa automática criada: " + task.getTitulo() +
                           " - Responsável: " + task.getResponsavel() +

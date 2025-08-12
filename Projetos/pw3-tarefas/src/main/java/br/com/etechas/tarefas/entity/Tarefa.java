@@ -10,7 +10,8 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "TBL_TAREFA")
-@Data
+@Getter
+@Setter
 public class Tarefa {
     @Id
     @Column(name = "ID_TASK")
@@ -32,4 +33,5 @@ public class Tarefa {
 
     @Column(name = "TX_RESPONSAVEL")
     private String responsavel;
+
 }
